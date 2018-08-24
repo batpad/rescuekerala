@@ -396,11 +396,6 @@ def expire_people_filter_form(sender, **kwargs):
 
 
 class PrivateRescueCamp(models.Model):
-    lsg_types = [
-        (LSGTypes.CORPORATION.value, 'Corporation'),
-        (LSGTypes.MUNICIPALITY.value, 'Municipality'),
-        (LSGTypes.GRAMA_PANCHAYATH.value, 'Grama Panchayath')
-    ]
 
     name = models.CharField(max_length=50,verbose_name="Camp Name - ക്യാമ്പിന്റെ പേര്")
     location = models.TextField(verbose_name="Address - അഡ്രസ്",blank=True,null=True)
