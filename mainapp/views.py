@@ -105,7 +105,26 @@ class RegisterNGO(CreateView):
 
 class RegisterPrivateReliefCamp(CreateView):
     model = PrivateRescueCamp
-    fields = '__all__'
+    fields = [
+        'name',
+        'location',
+        'district',
+        'lsg_name',
+        'ward_name',
+        'contacts',
+        'facilities_available',
+        'map_link',
+        'latlng',
+        'total_people',
+        'total_males',
+        'total_females',
+        'total_infants',
+        'food_req',
+        'clothing_req',
+        'sanitary_req',
+        'medical_req',
+        'other_req'
+    ]
     success_url = '/pcamp'
 
 def privatecc(request):
